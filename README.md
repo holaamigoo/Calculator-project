@@ -114,19 +114,19 @@ print(sys.path)
 ```
 ### Объясните, какие пути в ней содержатся и как Python использует их для поиска модулей.
 
-['c:\\Users\\rst\\Documents\\МИИГАиК\\Python VS CODE projects\\Calculator project'- текущая директория из которой запущен скрипт,
-'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\python310.zip'-дикертории в переменной окружения PYTHONPATH (изменяется по желанию) ---- (*),
-'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\DLLs' --- (*),
-'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\lib' ---(*),
-'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310' --- (*),
-'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages' - стандартные директории с пакетами Python]
+['c:\\Users\\rst\\Documents\\МИИГАиК\\Python VS CODE projects\\Calculator project' **- текущая директория из которой запущен скрипт**,
+'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\python310.zip' **-дикертории в переменной окружения PYTHONPATH (изменяется по желанию) ---- (*)**,
+'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\DLLs' **--- (*)**,
+'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\lib' **---(*)**,
+'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310' **--- (*)**,
+'C:\\Users\\rst\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages' **- стандартные директории с пакетами Python**]
 
 1) Проверка встроенных модулей: Python сначала проверяет, является ли модуль встроенным. Встроенные модули — это те, которые поставляются вместе с интерпретатором Python, такие как sys или os.
 
 2) Поиск в sys.path: Если модуль не встроенный, Python ищет его в списке директорий, указанных в переменной sys.path. Этот список включает:
-Текущую директорию, из которой был запущен скрипт.
-Директории, указанные в переменной окружения PYTHONPATH.
-Стандартные директории, в которых установлены пакеты Python, такие как site-packages.
+- Текущую директорию, из которой был запущен скрипт.
+- Директории, указанные в переменной окружения PYTHONPATH.
+- Стандартные директории, в которых установлены пакеты Python, такие как site-packages.
 3) Файлы и каталоги: Python ищет файлы с расширением .py для модулей и каталоги с файлом `__init__.py` для пакетов. Если файл или каталог найден, он загружается и выполняется.
 
 ## б. Попробуйте переместить папку calculator в другую директорию, которая не входит в sys.path. Можете ли вы теперь импортировать пакет? Что нужно сделать, чтобы Python мог найти ваш пакет?
